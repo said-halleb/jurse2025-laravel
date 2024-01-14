@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your App Name</title>
+    <title>jurse2025
+    </title>
     <!-- Ajoutez vos liens CSS, scripts, etc. ici si nécessaire -->
 </head>
 <body>
 
     <header>
-        <h1>Your App Name</h1>
+        <h1>jurse2025</h1>
         <!-- Ajoutez le contenu du haut de page ici si nécessaire -->
     </header>
 
