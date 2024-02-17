@@ -10,6 +10,7 @@ class CreateSponsorsTable extends Migration
     {
         Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
+    
             $table->string('src'); // Le chemin de l'image du sponsor
             $table->string('alt'); // Texte alternatif de l'image
             $table->integer('order'); // Ordre d'affichage des sponsors

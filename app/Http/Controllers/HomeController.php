@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Link;
+use App\Models\Photo;
+use App\Models\Sponsor;
 use Illuminate\Http\Request;
-use App\Link;
+use App\Models\KeynoteSpeaker;
 
 class HomeController extends Controller
 {
@@ -11,8 +14,12 @@ class HomeController extends Controller
     public function index()
     {
         $links = Link::all();
-        return view('home.index', compact('links'));
+        $photos = Photo::all();
+        $sponcors = Sponsor::all();
+        $speakers =KeynoteSpeaker::all();
+        return view('home.index', compact('links', 'photos', 'sponcors','speakers'));
     }
+    
 
     // Afficher un lien par ID
     public function show($id)
@@ -65,5 +72,22 @@ class HomeController extends Controller
     {
         Link::destroy($id);
         return redirect()->route('home.index')->with('success', 'Link deleted successfully');
+    }
+   
+
+    public function submitForm(Request $request)
+    {
+        // Validate the form data
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        // Process form submission (e.g., send email, save to database)
+        Mail::to('rimjridimc@gmail.com')->send(new ContactFormSubmitted($validatedData));
+
+        // Redirect back with success message
+        return redirect('/')->with('success', 'Your message has been sent successfully!');
     }
 }
