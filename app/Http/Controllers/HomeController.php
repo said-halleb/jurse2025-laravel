@@ -8,6 +8,7 @@ use App\Models\Sponsor;
 use Illuminate\Http\Request;
 use App\Models\KeynoteSpeaker;
 
+
 class HomeController extends Controller
 {
     // Afficher tous les liens

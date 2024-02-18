@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -104,6 +105,7 @@
           <li>
             <a class="page-scroll" href="#google-map-area">Contact</a>
           </li>
+
         </ul>
         <!-- Mobile Menu End -->
 
